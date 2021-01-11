@@ -1,0 +1,130 @@
+1=5730=Kurzholz; Kommentare nach zweitem = möglich
+2=5730=Kurzholz; Rundholz in Polxess
+3=5730=Kurzholz; Rundholz in Polxess
+4=5730=Kurzholz; Rundholz in Polxess
+5=5730=Kurzholz; Rundholz in Polxess
+6=5730=Kurzholz; Rundholz in Polxess
+7=5730=Kurzholz; Rundholz in Polxess
+11=5730=Kurzholz; Rundholz in Polxess
+12=5730=Kurzholz; Rundholz in Polxess
+13=5730=Kurzholz; Rundholz in Polxess
+14=5730=Kurzholz; Rundholz in Polxess
+15=5730=Kurzholz; Rundholz in Polxess
+16=5730=Kurzholz; Rundholz in Polxess
+17=5730=Kurzholz; Rundholz in Polxess
+21=5730=Kurzholz; Rundholz in Polxess
+22=5730=Kurzholz; Rundholz in Polxess
+23=5730=Kurzholz; Rundholz in Polxess
+24=5730=Kurzholz; Rundholz in Polxess
+25=5730=Kurzholz; Rundholz in Polxess
+26=5730=Kurzholz; Rundholz in Polxess
+27=5730=Kurzholz; Rundholz in Polxess
+31=5730=Kurzholz; Rundholz in Polxess
+32=5730=Kurzholz; Rundholz in Polxess
+33=5730=Kurzholz; Rundholz in Polxess
+34=5730=Kurzholz; Rundholz in Polxess
+35=5730=Kurzholz; Rundholz in Polxess
+36=5730=Kurzholz; Rundholz in Polxess
+37=5730=Kurzholz; Rundholz in Polxess
+41=5730=Kurzholz; Rundholz in Polxess
+42=5730=Kurzholz; Rundholz in Polxess
+43=5730=Kurzholz; Rundholz in Polxess
+44=5730=Kurzholz; Rundholz in Polxess
+45=5730=Kurzholz; Rundholz in Polxess
+46=5730=Kurzholz; Rundholz in Polxess
+47=5730=Kurzholz; Rundholz in Polxess
+51=5730=Kurzholz; Rundholz in Polxess
+52=5730=Kurzholz; Rundholz in Polxess
+53=5730=Kurzholz; Rundholz in Polxess
+54=5730=Kurzholz; Rundholz in Polxess
+55=5730=Kurzholz; Rundholz in Polxess
+56=5730=Kurzholz; Rundholz in Polxess
+57=5730=Kurzholz; Rundholz in Polxess
+61=5730=Kurzholz; Rundholz in Polxess
+62=5730=Kurzholz; Rundholz in Polxess
+63=5730=Kurzholz; Rundholz in Polxess
+66=5730=Kurzholz; Rundholz in Polxess
+67=5730=Kurzholz; Rundholz in Polxess
+68=5730=Kurzholz; Rundholz in Polxess
+71=5730=Kurzholz; Rundholz in Polxess
+72=5730=Kurzholz; Rundholz in Polxess
+73=5730=Kurzholz; Rundholz in Polxess
+76=5730=Kurzholz; Rundholz in Polxess
+77=5730=Kurzholz; Rundholz in Polxess
+78=5730=Kurzholz; Rundholz in Polxess
+81=5730=Kurzholz; Rundholz in Polxess
+82=5730=Kurzholz; Rundholz in Polxess
+83=5730=Kurzholz; Rundholz in Polxess
+86=5730=Kurzholz; Rundholz in Polxess
+87=5730=Kurzholz; Rundholz in Polxess
+88=5730=Kurzholz; Rundholz in Polxess
+101=14046=Laubholz; Laubrundholz in Polxess
+102=14046=Laubholz; Laubrundholz in Polxess
+103=14046=Laubholz; Laubrundholz in Polxess
+104=14046=Laubholz; Laubrundholz in Polxess
+105=14046=Laubholz; Laubrundholz in Polxess
+110=14046=Laubholz; Laubrundholz in Polxess
+111=14046=Laubholz; Laubrundholz in Polxess
+112=14046=Laubholz; Laubrundholz in Polxess
+113=14046=Laubholz; Laubrundholz in Polxess
+114=14046=Laubholz; Laubrundholz in Polxess
+115=14046=Laubholz; Laubrundholz in Polxess
+120=14046=Laubholz; Laubrundholz in Polxess
+121=14046=Laubholz; Laubrundholz in Polxess
+122=14046=Laubholz; Laubrundholz in Polxess
+123=14046=Laubholz; Laubrundholz in Polxess
+124=14046=Laubholz; Laubrundholz in Polxess
+125=14046=Laubholz; Laubrundholz in Polxess
+131=14046=Laubholz; Laubrundholz in Polxess
+132=14046=Laubholz; Laubrundholz in Polxess
+133=14046=Laubholz; Laubrundholz in Polxess
+134=14046=Laubholz; Laubrundholz in Polxess
+135=14046=Laubholz; Laubrundholz in Polxess
+141=14052=Schleifholz Nadel
+142=14052=Schleifholz Nadel
+143=14052=Schleifholz Nadel
+144=14052=Schleifholz Nadel
+145=14057=Zellulosenadelholz
+146=14057=Zellulosenadelholz
+147=14057=Zellulosenadelholz
+148=14057=Zellulosenadelholz
+149=14056=Zelluloselaubholz
+150=14056=Zelluloselaubholz
+151=14056=Zelluloselaubholz
+152=14056=Zelluloselaubholz
+153=14048=Plattennadelholz
+154=14048=Plattennadelholz
+155=14047=Plattenlaubholz
+156=14047=Plattenlaubholz
+157=14047=Plattenlaubholz
+158=14047=Plattenlaubholz
+159=0=Holzwollenholz;Nicht vorhanden; HW in Polxess
+160=0=Holzwollenholz;Nicht vorhanden; HW in Polxess
+161=0=Holzwollenholz;Nicht vorhanden; HW in Polxess
+162=0=Holzwollenholz;Nicht vorhanden; HW in Polxess
+171=14037=Brennholz
+172=14037=Brennholz
+173=14037=Brennholz
+174=14037=Brennholz
+175=14037=Brennholz
+176=14037=Brennholz
+177=14037=Brennholz
+178=14037=Brennholz
+179=14037=Brennholz
+180=14037=Brennholz
+181=14037=Brennholz
+182=14037=Brennholz
+183=14037=Brennholz
+184=14037=Brennholz
+185=14037=Brennholz
+186=14037=Brennholz
+191=14380=Q1_Waldholz 1; Hackholz in Polxess
+192=14380=Q1_Waldholz 1; Hackholz in Polxess
+193=14380=Q1_Waldholz 1; Hackholz in Polxess
+194=14380=Q1_Waldholz 1; Hackholz in Polxess
+195=14380=Q1_Waldholz 1; Hackholz in Polxess
+196=14380=Q1_Waldholz 1; Hackholz in Polxess
+197=14380=Q1_Waldholz 1; Hackholz in Polxess
+198=14380=Q1_Waldholz 1; Hackholz in Polxess
+199=14380=Q1_Waldholz 1; Hackholz in Polxess
+200=14380=Q1_Waldholz 1; Hackholz in Polxess

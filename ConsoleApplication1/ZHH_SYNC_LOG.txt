@@ -1,0 +1,234 @@
+
+Start NL Import der Stammdaten 11:02:54.4185189
+Import der Holzarten erfolgreich 11:02:55.1474490
+Import der Holzsorten erfolgreich 11:02:55.3172744
+Import der Güteklassen erfolgreich 11:02:55.4799166
+Create PX Session 11:02:55.4809187
+Session Feedback:  11:02:55.8225546
+Import PX Stammdaten 11:02:55.8230548
+GetAssortments Feedback:  11:02:56.0790467
+Dictionary Holzart erstellt 11:02:56.0800531
+Dictionary Holzsorte erstellt 11:02:56.0805533
+Dictionary Güteklasse erstellt 11:02:56.0805533
+Close Session: 11:02:56.1998869
+
+Create PX Session 11:02:56.2068877
+Session Feedback:  11:02:56.3651117
+GetPolter Feedback:  11:02:56.5082685
+Dictionary Kontakte erstellt 11:02:56.5082685
+Close Session: 11:02:56.7438173
+
+Start NL Import der Stammdaten 11:02:58.3122236
+Import der Stammdaten nicht erfolgreich 11:02:58.5399491
+Create PX Session 11:02:58.5409517
+Session Feedback:  11:02:58.7311462
+Import PX Stammdaten 11:02:58.7316473
+GetAssortments Feedback:  11:02:58.9632564
+Dictionary Holzart erstellt 11:02:58.9637567
+Dictionary Holzsorte erstellt 11:02:58.9642577
+Dictionary Güteklasse erstellt 11:02:58.9647575
+Close Session: 11:02:59.0824977
+
+Create PX Session 11:02:59.0864994
+Session Feedback:  11:02:59.2656257
+GetPolter Feedback:  11:02:59.3946954
+Dictionary Kontakte erstellt 11:02:59.3946954
+Close Session: 11:02:59.6241665
+
+Start Import PX Polter 11:02:59.6331706
+Create PX Session 11:02:59.6331706
+Session Feedback:  11:02:59.8256516
+GetPolter Feedback:  11:03:07.0890453
+Import Polter in NL  11:03:07.6546804
+Close Session: 11:03:27.4591374
+
+Create PX Session 11:03:33.4880195
+Session Feedback:  11:03:36.4195120
+GetPolter Feedback:  11:03:37.5034780
+Import PolterAttachments in NL  11:03:37.9952919
+Fehler 11:03:46.6968055
+Close Session: 11:03:51.6654130
+
+Start SetPolter 11:03:54.1686530
+Create PX Session 11:03:54.5544607
+Session Feedback:  11:03:56.0243095
+GetPolter Feedback:  11:03:56.1508692
+Fehler Polter setsize/setprocessed 11:03:56.2242748
+Close Session: 11:03:56.3416084
+
+Accept PX Polter 11:03:59.2017864
+Create PX Session 11:03:59.2022900
+Session Feedback:  11:03:59.3932619
+GetPolter Feedback:  11:03:59.5199720
+Import Polter in NL  11:03:59.5199720
+Accept Polter Feedback:  11:03:59.6602361
+Close Session: 11:03:59.7732513
+
+Start Abbrogate von abgelehnten Poltern 11:04:00.9613403
+Create PX Session 11:04:00.9613403
+Session Feedback:  11:04:01.1627600
+GetPolter Feedback:  11:04:01.2876810
+Fehler Polter abrogate 11:04:01.3514950
+Close Session: 11:04:01.4695204
+
+Start NL Import der Stammdaten 11:13:34.7634906
+Import der Holzarten erfolgreich 11:13:35.5140348
+Import der Holzsorten erfolgreich 11:13:35.6839870
+Import der Güteklassen erfolgreich 11:13:35.8463978
+Create PX Session 11:13:35.8463978
+Session Feedback:  11:13:36.1973952
+Import PX Stammdaten 11:13:36.1978959
+GetAssortments Feedback:  11:13:36.4335430
+Dictionary Holzart erstellt 11:13:36.4345462
+Dictionary Holzsorte erstellt 11:13:36.4345462
+Dictionary Güteklasse erstellt 11:13:36.4355472
+Close Session: 11:13:36.5646213
+
+Create PX Session 11:13:36.5716248
+Session Feedback:  11:13:36.7402771
+GetPolter Feedback:  11:13:36.8884077
+Dictionary Kontakte erstellt 11:13:36.8889084
+Close Session: 11:13:37.1239882
+
+Start Import PX Polter 11:13:38.7714044
+Create PX Session 11:13:38.7714044
+Session Feedback:  11:13:38.9602065
+GetPolter Feedback:  11:13:42.3053164
+Import Polter in NL  11:13:42.6517424
+Close Session: 11:18:30.2884127
+
+Start Import PX Polter 11:18:44.0613820
+Create PX Session 11:18:44.0623809
+Session Feedback:  11:18:44.2411563
+GetPolter Feedback:  11:18:46.5254504
+Import Polter in NL  11:18:46.9385627
+Close Session: 11:22:23.4094303
+
+Start NL Import der Stammdaten 11:22:29.3808497
+Import der Holzarten erfolgreich 11:22:30.1273433
+Import der Holzsorten erfolgreich 11:22:30.2999937
+Import der Güteklassen erfolgreich 11:22:30.4895054
+Create PX Session 11:22:30.4905056
+Session Feedback:  11:22:30.8516885
+Import PX Stammdaten 11:22:30.8516885
+GetAssortments Feedback:  11:22:31.0921762
+Dictionary Holzart erstellt 11:22:31.0931769
+Dictionary Holzsorte erstellt 11:22:31.0931769
+Dictionary Güteklasse erstellt 11:22:31.0931769
+Close Session: 11:22:31.2148389
+
+Create PX Session 11:22:31.2218428
+Session Feedback:  11:22:31.3752206
+GetPolter Feedback:  11:22:31.5259943
+Dictionary Kontakte erstellt 11:22:31.5269949
+Close Session: 11:22:31.7699264
+
+Start Import PX Polter 11:22:33.0156118
+Create PX Session 11:22:33.0156118
+Session Feedback:  11:22:33.1982402
+GetPolter Feedback:  11:22:34.8740934
+Import Polter in NL  11:22:34.8745929
+Close Session: 11:22:35.3836605
+
+Start Import PX Polter 11:22:37.4254855
+Create PX Session 11:22:37.4254855
+Session Feedback:  11:22:37.6232057
+GetPolter Feedback:  11:22:42.3197406
+Import Polter in NL  11:22:42.3207382
+Start NL Import der Stammdaten 11:30:43.9728477
+Import der Holzarten erfolgreich 11:30:44.7412302
+Import der Holzsorten erfolgreich 11:30:44.9098508
+Import der Güteklassen erfolgreich 11:30:45.0823467
+Create PX Session 11:30:45.0823467
+Session Feedback:  11:30:45.4411438
+Import PX Stammdaten 11:30:45.4411438
+GetAssortments Feedback:  11:30:45.6939994
+Dictionary Holzart erstellt 11:30:45.6950001
+Dictionary Holzsorte erstellt 11:30:45.6955004
+Dictionary Güteklasse erstellt 11:30:45.6960008
+Close Session: 11:30:45.8266425
+
+Create PX Session 11:30:45.8326457
+Session Feedback:  11:30:45.9904206
+GetPolter Feedback:  11:30:46.1528370
+Dictionary Kontakte erstellt 11:30:46.1533369
+Close Session: 11:30:46.3859825
+
+Start Import PX Polter 11:30:47.7230248
+Create PX Session 11:30:47.7230248
+Session Feedback:  11:30:47.9061364
+GetPolter Feedback:  11:30:57.0319462
+Import Polter in NL  11:30:57.0319462
+Start NL Import der Stammdaten 13:14:13.8380675
+Import der Holzarten erfolgreich 13:14:15.4214985
+Import der Holzsorten erfolgreich 13:14:15.7849256
+Import der Güteklassen erfolgreich 13:14:16.0182538
+Create PX Session 13:14:16.0247618
+Session Feedback:  13:14:16.5644214
+Import PX Stammdaten 13:14:16.5704261
+GetAssortments Feedback:  13:14:16.8101025
+Dictionary Holzart erstellt 13:14:16.8196484
+Dictionary Holzsorte erstellt 13:14:16.8236514
+Dictionary Güteklasse erstellt 13:14:16.8336570
+Close Session: 13:14:16.9749643
+
+Create PX Session 13:14:16.9889781
+Session Feedback:  13:14:17.1781180
+GetPolter Feedback:  13:14:17.4860944
+Dictionary Kontakte erstellt 13:14:17.4935979
+Close Session: 13:14:18.6490234
+
+Start NL Import der Stammdaten 13:21:03.8266104
+Import der Holzarten erfolgreich 13:21:04.6308359
+Import der Holzsorten erfolgreich 13:21:04.8314739
+Import der Güteklassen erfolgreich 13:21:05.0211251
+Create PX Session 13:21:05.0271286
+Session Feedback:  13:21:05.4586723
+Import PX Stammdaten 13:21:05.4646762
+GetAssortments Feedback:  13:21:05.7681934
+Dictionary Holzart erstellt 13:21:05.7751967
+Dictionary Holzsorte erstellt 13:21:05.7812015
+Dictionary Güteklasse erstellt 13:21:05.7867081
+Close Session: 13:21:05.9248537
+
+Create PX Session 13:21:05.9368637
+Session Feedback:  13:21:06.1238089
+GetPolter Feedback: Header data invalid 13:21:06.2609042
+Start NL Import der Stammdaten 13:21:51.3649174
+Import der Holzarten erfolgreich 13:21:52.1540249
+Import der Holzsorten erfolgreich 13:21:52.3483634
+Import der Güteklassen erfolgreich 13:21:52.5375040
+Create PX Session 13:21:52.5430153
+Session Feedback: User already logged in 13:21:52.9794254
+Import PX Stammdaten 13:21:52.9844283
+GetAssortments Feedback:  13:21:53.2878522
+Dictionary Holzart erstellt 13:21:53.2948577
+Dictionary Holzsorte erstellt 13:21:53.2998610
+Dictionary Güteklasse erstellt 13:21:53.3058658
+Close Session: 13:21:53.4749518
+
+Create PX Session 13:21:53.4869593
+Session Feedback: User already logged in 13:21:53.6974541
+GetPolter Feedback: Header data invalid 13:21:53.8685889
+Dictionary Kontakte erstellt 13:21:53.8755943
+Close Session: 13:21:54.0149685
+
+Start NL Import der Stammdaten 13:22:16.7945928
+Import der Holzarten erfolgreich 13:22:17.5815048
+Import der Holzsorten erfolgreich 13:22:17.7734567
+Import der Güteklassen erfolgreich 13:22:17.9636052
+Create PX Session 13:22:17.9696079
+Session Feedback:  13:22:18.4423620
+Import PX Stammdaten 13:22:18.4483659
+GetAssortments Feedback:  13:22:18.7556428
+Dictionary Holzart erstellt 13:22:18.7636493
+Dictionary Holzsorte erstellt 13:22:18.7696524
+Dictionary Güteklasse erstellt 13:22:18.7751595
+Close Session: 13:22:18.9319883
+
+Create PX Session 13:22:18.9439953
+Session Feedback:  13:22:19.1261822
+GetPolter Feedback: Header data invalid 13:22:19.3025260
+Dictionary Kontakte erstellt 13:22:19.3085278
+Close Session: 13:22:19.4849173
+

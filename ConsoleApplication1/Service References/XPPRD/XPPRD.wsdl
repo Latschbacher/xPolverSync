@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:XPPRD" name="XPPRD" targetNamespace="urn:XPPRD" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>v. 0.0.1</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="urn:XPPRD">
+      <xsd:complexType name="Session">
+        <xsd:sequence>
+          <xsd:element name="sessionID" type="xsd:int" />
+          <xsd:element name="hash" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Feedback">
+        <xsd:sequence>
+          <xsd:element name="code" type="xsd:int" />
+          <xsd:element minOccurs="0" name="text" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Point">
+        <xsd:sequence>
+          <xsd:element name="projection" type="xsd:int" />
+          <xsd:element name="posN" type="xsd:string" />
+          <xsd:element name="posE" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Extent">
+        <xsd:sequence>
+          <xsd:element name="topLeft" type="tns:Point" />
+          <xsd:element name="bottomRight" type="tns:Point" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Binary">
+        <xsd:sequence>
+          <xsd:element name="name" type="xsd:string" />
+          <xsd:element name="mimeType" type="xsd:string" />
+          <xsd:element name="content" type="xsd:base64Binary" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Notification">
+        <xsd:sequence>
+          <xsd:element name="date" type="xsd:dateTime" />
+          <xsd:element name="subject" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Contact">
+        <xsd:sequence>
+          <xsd:element name="memberID" type="xsd:int" />
+          <xsd:element name="memberName" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Color">
+        <xsd:sequence>
+          <xsd:element name="colorKey" type="xsd:int" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="color" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Signal">
+        <xsd:sequence>
+          <xsd:element name="signalID" type="xsd:int" />
+          <xsd:element name="signalType" type="xsd:int" />
+          <xsd:element name="position" type="tns:Point" />
+          <xsd:element name="orientation" type="xsd:int" />
+          <xsd:element name="description" type="xsd:string" />
+          <xsd:element name="additional" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Assortment">
+        <xsd:sequence>
+          <xsd:element name="sortCode" type="xsd:int" />
+          <xsd:element name="woodType" type="xsd:string" />
+          <xsd:element name="treeSpec" type="xsd:string" />
+          <xsd:element name="length" type="xsd:string" />
+          <xsd:element name="diameter" type="xsd:string" />
+          <xsd:element name="quality" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolterKey">
+        <xsd:sequence>
+          <xsd:element name="polterID" type="xsd:int" />
+          <xsd:element name="bindingID" type="xsd:int" />
+          <xsd:element name="sequenceID" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolterReq">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="ticketID" type="xsd:string" />
+          <xsd:element minOccurs="0" name="colorKey" type="xsd:int" />
+          <xsd:element minOccurs="0" name="ownerCode" type="xsd:int" />
+          <xsd:element minOccurs="0" name="ownerRef" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sortCode" type="xsd:int" />
+          <xsd:element minOccurs="0" name="size" type="xsd:int" />
+          <xsd:element minOccurs="0" name="polterInfo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="ownerInfo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="foreignRef" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orgInfo1" type="xsd:string" />
+          <xsd:element minOccurs="0" name="orgInfo2" type="xsd:string" />
+          <xsd:element minOccurs="0" name="addInfo1" type="xsd:string" />
+          <xsd:element minOccurs="0" name="addInfo2" type="xsd:string" />
+          <xsd:element minOccurs="0" name="addInfo3" type="xsd:string" />
+          <xsd:element minOccurs="0" name="addInfo4" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolterResp">
+        <xsd:sequence>
+          <xsd:element name="key" type="tns:PolterKey" />
+          <xsd:element name="ticketID" type="xsd:string" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element name="colorKey" type="xsd:int" />
+          <xsd:element name="ownerCode" type="xsd:int" />
+          <xsd:element name="ownerRef" type="xsd:string" />
+          <xsd:element name="sortCode" type="xsd:int" />
+          <xsd:element name="maxSize" type="xsd:int" />
+          <xsd:element name="size" type="xsd:int" />
+          <xsd:element name="position" type="tns:Point" />
+          <xsd:element name="polterInfo" type="xsd:string" />
+          <xsd:element name="ownerInfo" type="xsd:string" />
+          <xsd:element name="plantQuantity" type="xsd:int" />
+          <xsd:element name="foreignRef" type="xsd:string" />
+          <xsd:element name="orgInfo1" type="xsd:string" />
+          <xsd:element name="orgInfo2" type="xsd:string" />
+          <xsd:element name="addInfo1" type="xsd:string" />
+          <xsd:element name="addInfo2" type="xsd:string" />
+          <xsd:element name="addInfo3" type="xsd:string" />
+          <xsd:element name="addInfo4" type="xsd:string" />
+          <xsd:element name="billed" type="xsd:int" />
+          <xsd:element name="accepted" type="xsd:int" />
+          <xsd:element minOccurs="0" name="recFrom" type="xsd:string" />
+          <xsd:element minOccurs="0" name="sentTo" type="xsd:string" />
+          <xsd:element minOccurs="0" name="service1" type="xsd:string" />
+          <xsd:element minOccurs="0" name="service2" type="xsd:string" />
+          <xsd:element name="modPubUser" type="xsd:string" />
+          <xsd:element name="modPubDate" type="xsd:dateTime" />
+          <xsd:element name="initPubUser" type="xsd:string" />
+          <xsd:element name="initPubDate" type="xsd:dateTime" />
+          <xsd:element name="modPrivUser" type="xsd:string" />
+          <xsd:element name="modPrivDate" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolterInfo">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="infoID" type="xsd:int" />
+          <xsd:element name="infoCode" type="xsd:int" />
+          <xsd:element name="infoText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="attachment" type="tns:Binary" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PolterDetail">
+        <xsd:sequence>
+          <xsd:element name="polter" type="tns:PolterResp" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="info" type="tns:PolterInfo" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Binding">
+        <xsd:sequence>
+          <xsd:element name="bindingID" type="xsd:int" />
+          <xsd:element name="memberID" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SizeRec">
+        <xsd:sequence>
+          <xsd:element name="booked" type="xsd:dateTime" />
+          <xsd:element name="value" type="xsd:string" />
+          <xsd:element minOccurs="0" name="text" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SizeSum">
+        <xsd:sequence>
+          <xsd:element name="sizeCode" type="xsd:int" />
+          <xsd:element name="sum" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="bookings" type="tns:SizeRec" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Device">
+        <xsd:sequence>
+          <xsd:element name="position" type="tns:Point" />
+          <xsd:element name="quality" type="xsd:int" />
+          <xsd:element name="heading" type="xsd:int" />
+          <xsd:element name="speed" type="xsd:int" />
+          <xsd:element name="gpsTime" type="xsd:dateTime" />
+          <xsd:element name="status" type="xsd:int" />
+          <xsd:element minOccurs="0" name="statusText" type="xsd:string" />
+          <xsd:element name="alarm" type="xsd:int" />
+          <xsd:element minOccurs="0" name="message" type="xsd:string" />
+          <xsd:element minOccurs="0" name="name" type="xsd:string" />
+          <xsd:element minOccurs="0" name="nameAdd" type="xsd:string" />
+          <xsd:element minOccurs="0" name="function" type="xsd:string" />
+          <xsd:element minOccurs="0" name="description" type="xsd:string" />
+          <xsd:element name="update" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Map">
+        <xsd:sequence>
+          <xsd:element name="length" type="xsd:int" />
+          <xsd:element name="width" type="xsd:int" />
+          <xsd:element name="bitmap" type="xsd:base64Binary" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="CreateSessionReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="interfVersion" type="xsd:string" />
+            <xsd:element name="clientName" type="xsd:string" />
+            <xsd:element name="application" type="xsd:int" />
+            <xsd:element name="language" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateSessionResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element name="sessionID" type="xsd:int" />
+            <xsd:element name="salt" type="xsd:string" />
+            <xsd:element name="timeout" type="xsd:int" />
+            <xsd:element name="role" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CloseSessionReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="sessionID" type="xsd:int" />
+            <xsd:element name="salt" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CloseSessionResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="RenewSessionReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="RenewSessionResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetMapExtentReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetMapExtentResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="map" type="tns:Extent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetNotificationReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetNotificationResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="notifications" type="tns:Notification" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetNotificationReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetNotificationResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetContactReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="taskType" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetContactResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="contacts" type="tns:Contact" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetColorReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetColorResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="colors" type="tns:Color" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSignalReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSignalResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="signals" type="tns:Signal" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAssortmentReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetAssortmentResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="assortments" type="tns:Assortment" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetXPViewReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="viewType" type="xsd:int" />
+            <xsd:element minOccurs="0" name="relMember" type="xsd:int" />
+            <xsd:element minOccurs="0" name="ownerCode" type="xsd:string" />
+            <xsd:element minOccurs="0" name="sortCode" type="xsd:string" />
+            <xsd:element minOccurs="0" name="colorKey" type="xsd:int" />
+            <xsd:element minOccurs="0" name="from" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" name="to" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" name="perimeter" type="tns:Extent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetXPViewResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="polters" type="tns:PolterResp" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindXPolterReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element minOccurs="0" name="polterID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="ownerCode" type="xsd:string" />
+            <xsd:element minOccurs="0" name="sortCode" type="xsd:string" />
+            <xsd:element minOccurs="0" name="status" type="xsd:int" />
+            <xsd:element minOccurs="0" name="colorKey" type="xsd:int" />
+            <xsd:element minOccurs="0" name="ticketID" type="xsd:string" />
+            <xsd:element minOccurs="0" name="ownerRef" type="xsd:string" />
+            <xsd:element minOccurs="0" name="sizeFrom" type="xsd:int" />
+            <xsd:element minOccurs="0" name="sizeTo" type="xsd:int" />
+            <xsd:element minOccurs="0" name="dateFrom" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" name="dateTo" type="xsd:dateTime" />
+            <xsd:element minOccurs="0" name="polterInfo" type="xsd:string" />
+            <xsd:element minOccurs="0" name="ownerInfo" type="xsd:string" />
+            <xsd:element minOccurs="0" name="foreignRef" type="xsd:string" />
+            <xsd:element minOccurs="0" name="orgInfo1" type="xsd:string" />
+            <xsd:element minOccurs="0" name="orgInfo2" type="xsd:string" />
+            <xsd:element minOccurs="0" name="addInfo1" type="xsd:string" />
+            <xsd:element minOccurs="0" name="addInfo2" type="xsd:string" />
+            <xsd:element minOccurs="0" name="addInfo3" type="xsd:string" />
+            <xsd:element minOccurs="0" name="addInfo4" type="xsd:string" />
+            <xsd:element minOccurs="0" name="perimeter" type="tns:Extent" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FindXPolterResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="polters" type="tns:PolterResp" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DetailXPolterReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DetailXPolterResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="detail" type="tns:PolterDetail" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateXPolterReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="position" type="tns:Point" />
+            <xsd:element name="polter" type="tns:PolterReq" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="bindings" type="tns:Binding" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="info" type="tns:PolterInfo" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateXPolterResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="polter" type="tns:PolterResp" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateXPolterReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element minOccurs="0" name="position" type="tns:Point" />
+            <xsd:element name="polter" type="tns:PolterReq" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateXPolterResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="polter" type="tns:PolterResp" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AskXPBindingReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="polterID" type="xsd:int" />
+            <xsd:element name="bindingID" type="xsd:int" />
+            <xsd:element name="memberID" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AskXPBindingResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AccXPBindingReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element minOccurs="0" name="ownerRef" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AccXPBindingResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AbroXPBindingReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AbroXPBindingResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetXPProcessedReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element name="billed" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetXPProcessedResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetXPBilledReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetXPBilledResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetSizeXPolterReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element name="sizeCode" type="xsd:int" />
+            <xsd:element name="value" type="xsd:string" />
+            <xsd:element minOccurs="0" name="text" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SetSizeXPolterResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="sum" type="tns:SizeSum" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSizeXPolterReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element name="sizeCode" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetSizeXPolterResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="sum" type="tns:SizeSum" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddXPRefReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element name="ref" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddXPRefResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DelXPRefReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element name="ref" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DelXPRefResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetXPByRefReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="ref" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetXPByRefResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="polters" type="tns:PolterResp" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddXPAttachReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="key" type="tns:PolterKey" />
+            <xsd:element name="private" type="xsd:int" />
+            <xsd:element name="info" type="tns:PolterInfo" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AddXPAttachResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="infoID" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DelXPAttachReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="infoID" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="DelXPAttachResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetXPAttachReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element name="infoID" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetXPAttachResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="info" type="tns:PolterInfo" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetDeviceReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetDeviceResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="devices" type="tns:Device" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MapReportReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="header" type="tns:Session" />
+            <xsd:element minOccurs="0" name="mapView" type="tns:Map" />
+            <xsd:element minOccurs="0" maxOccurs="unbounded" name="polters" type="tns:PolterResp" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MapReportResp">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="fb" type="tns:Feedback" />
+            <xsd:element minOccurs="0" name="document" type="tns:Binary" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateSessionRequest">
+    <wsdl:part name="parameters" element="tns:CreateSessionReq" />
+  </wsdl:message>
+  <wsdl:message name="CreateSessionResponse">
+    <wsdl:part name="parameters" element="tns:CreateSessionResp" />
+  </wsdl:message>
+  <wsdl:message name="CloseSessionRequest">
+    <wsdl:part name="parameters" element="tns:CloseSessionReq" />
+  </wsdl:message>
+  <wsdl:message name="CloseSessionResponse">
+    <wsdl:part name="parameters" element="tns:CloseSessionResp" />
+  </wsdl:message>
+  <wsdl:message name="RenewSessionRequest">
+    <wsdl:part name="parameters" element="tns:RenewSessionReq" />
+  </wsdl:message>
+  <wsdl:message name="RenewSessionResponse">
+    <wsdl:part name="parameters" element="tns:RenewSessionResp" />
+  </wsdl:message>
+  <wsdl:message name="GetContactRequest">
+    <wsdl:part name="parameters" element="tns:GetContactReq" />
+  </wsdl:message>
+  <wsdl:message name="GetContactResponse">
+    <wsdl:part name="parameters" element="tns:GetContactResp" />
+  </wsdl:message>
+  <wsdl:message name="GetAssortmentRequest">
+    <wsdl:part name="parameters" element="tns:GetAssortmentReq" />
+  </wsdl:message>
+  <wsdl:message name="GetAssortmentResponse">
+    <wsdl:part name="parameters" element="tns:GetAssortmentResp" />
+  </wsdl:message>
+  <wsdl:message name="GetXPViewRequest">
+    <wsdl:part name="parameters" element="tns:GetXPViewReq" />
+  </wsdl:message>
+  <wsdl:message name="GetXPViewResponse">
+    <wsdl:part name="parameters" element="tns:GetXPViewResp" />
+  </wsdl:message>
+  <wsdl:message name="DetailXPolterRequest">
+    <wsdl:part name="parameters" element="tns:DetailXPolterReq" />
+  </wsdl:message>
+  <wsdl:message name="DetailXPolterResponse">
+    <wsdl:part name="parameters" element="tns:DetailXPolterResp" />
+  </wsdl:message>
+  <wsdl:message name="CreateXPolterRequest">
+    <wsdl:part name="parameters" element="tns:CreateXPolterReq" />
+  </wsdl:message>
+  <wsdl:message name="CreateXPolterResponse">
+    <wsdl:part name="parameters" element="tns:CreateXPolterResp" />
+  </wsdl:message>
+  <wsdl:message name="UpdateXPolterRequest">
+    <wsdl:part name="parameters" element="tns:UpdateXPolterReq" />
+  </wsdl:message>
+  <wsdl:message name="UpdateXPolterResponse">
+    <wsdl:part name="parameters" element="tns:UpdateXPolterResp" />
+  </wsdl:message>
+  <wsdl:message name="AskXPBindingRequest">
+    <wsdl:part name="parameters" element="tns:AskXPBindingReq" />
+  </wsdl:message>
+  <wsdl:message name="AskXPBindingResponse">
+    <wsdl:part name="parameters" element="tns:AskXPBindingResp" />
+  </wsdl:message>
+  <wsdl:message name="AccXPBindingRequest">
+    <wsdl:part name="parameters" element="tns:AccXPBindingReq" />
+  </wsdl:message>
+  <wsdl:message name="AccXPBindingResponse">
+    <wsdl:part name="parameters" element="tns:AccXPBindingResp" />
+  </wsdl:message>
+  <wsdl:message name="AbroXPBindingRequest">
+    <wsdl:part name="parameters" element="tns:AbroXPBindingReq" />
+  </wsdl:message>
+  <wsdl:message name="AbroXPBindingResponse">
+    <wsdl:part name="parameters" element="tns:AbroXPBindingResp" />
+  </wsdl:message>
+  <wsdl:message name="SetXPProcessedRequest">
+    <wsdl:part name="parameters" element="tns:SetXPProcessedReq" />
+  </wsdl:message>
+  <wsdl:message name="SetXPProcessedResponse">
+    <wsdl:part name="parameters" element="tns:SetXPProcessedResp" />
+  </wsdl:message>
+  <wsdl:message name="SetSizeXPolterRequest">
+    <wsdl:part name="parameters" element="tns:SetSizeXPolterReq" />
+  </wsdl:message>
+  <wsdl:message name="SetSizeXPolterResponse">
+    <wsdl:part name="parameters" element="tns:SetSizeXPolterResp" />
+  </wsdl:message>
+  <wsdl:message name="AddXPAttachRequest">
+    <wsdl:part name="parameters" element="tns:AddXPAttachReq" />
+  </wsdl:message>
+  <wsdl:message name="AddXPAttachResponse">
+    <wsdl:part name="parameters" element="tns:AddXPAttachResp" />
+  </wsdl:message>
+  <wsdl:message name="GetXPAttachRequest">
+    <wsdl:part name="parameters" element="tns:GetXPAttachReq" />
+  </wsdl:message>
+  <wsdl:message name="GetXPAttachResponse">
+    <wsdl:part name="parameters" element="tns:GetXPAttachResp" />
+  </wsdl:message>
+  <wsdl:portType name="XPPRD">
+    <wsdl:operation name="CreateSession">
+      <wsdl:input message="tns:CreateSessionRequest" />
+      <wsdl:output message="tns:CreateSessionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseSession">
+      <wsdl:input message="tns:CloseSessionRequest" />
+      <wsdl:output message="tns:CloseSessionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="RenewSession">
+      <wsdl:input message="tns:RenewSessionRequest" />
+      <wsdl:output message="tns:RenewSessionResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <wsdl:input message="tns:GetContactRequest" />
+      <wsdl:output message="tns:GetContactResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssortment">
+      <wsdl:input message="tns:GetAssortmentRequest" />
+      <wsdl:output message="tns:GetAssortmentResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXPView">
+      <wsdl:input message="tns:GetXPViewRequest" />
+      <wsdl:output message="tns:GetXPViewResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DetailXPolter">
+      <wsdl:input message="tns:DetailXPolterRequest" />
+      <wsdl:output message="tns:DetailXPolterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateXPolter">
+      <wsdl:input message="tns:CreateXPolterRequest" />
+      <wsdl:output message="tns:CreateXPolterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateXPolter">
+      <wsdl:input message="tns:UpdateXPolterRequest" />
+      <wsdl:output message="tns:UpdateXPolterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AskXPBinding">
+      <wsdl:input message="tns:AskXPBindingRequest" />
+      <wsdl:output message="tns:AskXPBindingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AccXPBinding">
+      <wsdl:input message="tns:AccXPBindingRequest" />
+      <wsdl:output message="tns:AccXPBindingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AbroXPBinding">
+      <wsdl:input message="tns:AbroXPBindingRequest" />
+      <wsdl:output message="tns:AbroXPBindingResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetXPProcessed">
+      <wsdl:input message="tns:SetXPProcessedRequest" />
+      <wsdl:output message="tns:SetXPProcessedResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSizeXPolter">
+      <wsdl:input message="tns:SetSizeXPolterRequest" />
+      <wsdl:output message="tns:SetSizeXPolterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="AddXPAttach">
+      <wsdl:input message="tns:AddXPAttachRequest" />
+      <wsdl:output message="tns:AddXPAttachResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetXPAttach">
+      <wsdl:input message="tns:GetXPAttachRequest" />
+      <wsdl:output message="tns:GetXPAttachResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="XPPRDSOAP" type="tns:XPPRD">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateSession">
+      <soap:operation soapAction="urn:XPPRD/CreateSession" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CloseSession">
+      <soap:operation soapAction="urn:XPPRD/CloseSession" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenewSession">
+      <soap:operation soapAction="urn:XPPRD/RenewSession" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContact">
+      <soap:operation soapAction="urn:XPPRD/GetContact" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssortment">
+      <soap:operation soapAction="urn:XPPRD/GetAssortment" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXPView">
+      <soap:operation soapAction="urn:XPPRD/GetXPView" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetailXPolter">
+      <soap:operation soapAction="urn:XPPRD/DetailXPolter" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateXPolter">
+      <soap:operation soapAction="urn:XPPRD/CreateXPolter" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateXPolter">
+      <soap:operation soapAction="urn:XPPRD/UpdateXPolter" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AskXPBinding">
+      <soap:operation soapAction="urn:XPPRD/AskXPBinding" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccXPBinding">
+      <soap:operation soapAction="urn:XPPRD/AccXPBinding" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbroXPBinding">
+      <soap:operation soapAction="urn:XPPRD/AbroXPBinding" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetXPProcessed">
+      <soap:operation soapAction="urn:XPPRD/SetXPProcessed" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSizeXPolter">
+      <soap:operation soapAction="urn:XPPRD/SetSizeXPolter" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddXPAttach">
+      <soap:operation soapAction="urn:XPPRD/AddXPAttach" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetXPAttach">
+      <soap:operation soapAction="urn:XPPRD/GetXPAttach" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="XPPRD">
+    <wsdl:port name="XPPRDSOAP" binding="tns:XPPRDSOAP">
+      <soap:address location="http://localhost:7007" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

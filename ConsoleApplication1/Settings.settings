@@ -1,0 +1,69 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ConsoleApplication1" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="webservice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://netlogistik.winforstpro.com/wfpnetservicewcfdemo/service.svc</Value>
+    </Setting>
+    <Setting Name="webfirma" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Zürichholz AG</Value>
+    </Setting>
+    <Setting Name="uebergabewebfirma" Type="System.String" Scope="User">
+      <Value Profile="(Default)">xPolver-ZHH</Value>
+    </Setting>
+    <Setting Name="client_endpoint" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://xpprd.polver.ch</Value>
+    </Setting>
+    <Setting Name="polverinterfaceversion" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1.0.0</Value>
+    </Setting>
+    <Setting Name="polverusername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">wfpro-zhh</Value>
+    </Setting>
+    <Setting Name="polverpassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">la0818zh</Value>
+    </Setting>
+    <Setting Name="mail_from" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="mail_to" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="smtp_host" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="smtp_port" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="smtp_user" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="smtp_pw" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="dictionaryhs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmp\0_Entwicklung\20170601_Schnittstelle_ZHH\20170802\ConsoleApplication1\dictnlhs.txt</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UploadUser</Value>
+    </Setting>
+    <Setting Name="dictionaryha" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmp\0_Entwicklung\20170601_Schnittstelle_ZHH\20170802\ConsoleApplication1\dictnlha.txt</Value>
+    </Setting>
+    <Setting Name="dictionarygkl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmp\0_Entwicklung\20170601_Schnittstelle_ZHH\20170802\ConsoleApplication1\dictnlgkl.txt</Value>
+    </Setting>
+    <Setting Name="logs" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmp\0_Entwicklung\20170601_Schnittstelle_ZHH\20170802\ConsoleApplication1\ZHH_SYNC_LOG.txt</Value>
+    </Setting>
+    <Setting Name="dictionarycontacts" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\tmp\0_Entwicklung\20170601_Schnittstelle_ZHH\20170802\ConsoleApplication1\dictcontacts.txt</Value>
+    </Setting>
+    <Setting Name="pathtmpdocs" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

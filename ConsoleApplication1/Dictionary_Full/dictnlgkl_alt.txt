@@ -1,0 +1,130 @@
+1=3714=BC
+2=3711=AB
+3=3714=BC
+4=3716=CD
+5=3711=AB
+6=3714=BC
+7=3716=CD
+11=3714=BC
+12=3711=AB
+13=3714=BC
+14=3716=CD
+15=3711=AB
+16=3714=BC
+17=3716=CD
+21=3714=BC
+22=3711=AB
+23=3714=BC
+24=3716=CD
+25=3711=AB
+26=3714=BC
+27=3716=CD
+31=3714=BC
+32=3711=AB
+33=3714=BC
+34=3716=CD
+35=3711=AB
+36=3714=BC
+37=3716=CD
+41=3714=BC
+42=3711=AB
+43=3714=BC
+44=3716=CD
+45=3711=AB
+46=3714=BC
+47=3716=CD
+51=3714=BC
+52=3711=AB
+53=3714=BC
+54=3716=CD
+55=3711=AB
+56=3714=BC
+57=3716=CD
+61=3714=BC
+62=3714=BC
+63=3714=BC
+66=3714=BC
+67=3714=BC
+68=3714=BC
+71=3714=BC
+72=3714=BC
+73=3714=BC
+76=3714=BC
+77=3714=BC
+78=3714=BC
+81=3714=BC
+82=3714=BC
+83=3714=BC
+86=3714=BC
+87=3714=BC
+88=3714=BC
+101=3714=BC
+102=3714=BC
+103=3713=B
+104=3715=C
+105=3717=D
+110=0=Nicht vorhanden als GKL; Schwellen in Polxess
+111=3714=BC
+112=3714=BC
+113=3713=B
+114=3715=C
+115=3717=D
+120=0=Nicht vorhanden als GKL; Schwellen in Polxess
+121=3714=BC
+122=3714=BC
+123=3713=B
+124=3715=C
+125=3717=D
+131=3714=BC
+132=3714=BC
+133=3713=B
+134=3715=C
+135=3717=D
+141=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+142=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+143=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+144=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+145=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+146=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+147=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+148=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+149=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+150=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+151=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+152=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+153=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+154=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+155=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+156=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+157=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+158=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+159=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+160=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+161=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+162=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+171=10410=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+172=10410=GKL 1 wurd verwendet; Nicht vorhanden als GKL; Rugel in Polxess
+173=10453=Spälten
+174=0=Nicht vorhanden; trocken in Polxess
+175=0=Nicht vorhanden; trocken in Polxess
+176=0=Nicht vorhanden als GKL; Rugel in Polxess
+177=10453=Spälten
+178=0=Nicht vorhanden; trocken in Polxess
+179=0=Nicht vorhanden; trocken in Polxess
+180=0=Nicht vorhanden als GKL; Rugel in Polxess
+181=10453=Spälten
+182=0=Nicht vorhanden; trocken in Polxess
+183=0=Nicht vorhanden; trocken in Polxess
+184=0=Nicht vorhanden als GKL; Rugel in Polxess
+185=10453=Spälten
+186=0=Nicht vorhanden; trocken in Polxess
+191=0=Nicht vorhanden; - in Polxess
+192=0=Nicht vorhanden; - in Polxess
+193=0=Nicht vorhanden; - in Polxess
+194=0=Nicht vorhanden; - in Polxess
+195=0=Nicht vorhanden; - in Polxess
+196=0=Nicht vorhanden; - in Polxess
+197=0=Nicht vorhanden; - in Polxess
+198=0=Nicht vorhanden; - in Polxess
+199=0=Nicht vorhanden; - in Polxess
+200=0=Nicht vorhanden; - in Polxess

@@ -1,0 +1,59 @@
+21=F/T=Fichte/Tanne
+22=F/T=Fichte/Tanne
+23=F/T=Fichte/Tanne
+24=F/T=Fichte/Tanne
+25=F/T=Fichte/Tanne
+26=F/T=Fichte/Tanne
+27=F/T=Fichte/Tanne
+51=AN=Andere Nadelhölzer
+52=AN=Andere Nadelhölzer
+53=AN=Andere Nadelhölzer
+54=AN=Andere Nadelhölzer
+55=AN=Andere Nadelhölzer
+56=AN=Andere Nadelhölzer
+57=AN=Andere Nadelhölzer
+71=F/T=Fichte/Tanne
+72=F/T=Fichte/Tanne
+73=F/T=Fichte/Tanne
+86=AN=Andere Nadelhölzer
+87=AN=Andere Nadelhölzer
+88=AN=Andere Nadelhölzer
+141=F/T=Fichte/Tanne
+142=F/T=Fichte/Tanne
+143=F/T=Fichte/Tanne
+144=F/T=Fichte/Tanne
+145=F/T=Fichte/Tanne
+146=F/T=Fichte/Tanne
+147=AN=Andere Nadelhölzer
+148=AN=Andere Nadelhölzer
+151=AL=Andere Laubhölzer
+152=AL=Andere Laubhölzer
+153=AN=Andere Nadelhölzer
+154=AN=Andere Nadelhölzer
+157=AL=Andere Laubhölzer
+158=AL=Andere Laubhölzer
+159=AN=Andere Nadelhölzer
+160=AN=Andere Nadelhölzer
+161=AL=Andere Laubhölzer
+162=AL=Andere Laubhölzer
+175=AL=Andere Laubhölzer
+176=AL=Andere Laubhölzer
+177=AL=Andere Laubhölzer
+178=AL=Andere Laubhölzer
+179=F/T=Fichte/Tanne
+180=F/T=Fichte/Tanne
+181=F/T=Fichte/Tanne
+182=F/T=Fichte/Tanne
+183=AN=Andere Nadelhölzer
+184=AN=Andere Nadelhölzer
+185=AN=Andere Nadelhölzer
+186=AN=Andere Nadelhölzer
+191=Bu="Buche" in Polxess
+192=0=Nicht vorhanden; "Lbh Stämme" in Polxess
+193=0=Nicht vorhanden; "Lbh Aeste Kronen" in Polxess
+194=0=Nicht vorhanden; "Waldholz Laub > 25%" in Polxess
+195=0=Nicht vorhanden; "Waldholz Laub > 50%" in Polxess
+196=0=Nicht vorhanden; "Waldholz Laub > 75%" in Polxess
+197=0=Nicht vorhanden; "Waldholz Nadel > 75%" in Polxess
+198=AL=Andere Laubhölzer
+200=0=Nicht vorhanden; "Landschaftspflegeholz" in Polxess

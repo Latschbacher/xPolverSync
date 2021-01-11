@@ -1,0 +1,1427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/" />
+      <xs:element name="GetData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="value" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDataUsingDataContract">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDataUsingDataContractResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SelectSQL">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="strSQL" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="strPassword" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SelectSQLResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SelectSQLResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Disp_Trans">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ds" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Disp_TransResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Disp_TransResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNetLogistikDocuments">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="strIDs" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="strType" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetNetLogistikDocumentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetNetLogistikDocumentsResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CheckUserResult" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="test10">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="test10Response">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="test11">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="test11Response">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDate">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetDateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetDateResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuftrag">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Auftrag" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p2" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p3" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAuftragResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetAuftragResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PutSW">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p2" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p3" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ds" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PutSWResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PutSWResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Tabellen">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p2" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p3" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ds" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TabellenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="TabellenResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Transport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p1" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p2" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="p3" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ds" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="TransportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="TransportResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ListenPool">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ds" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ListenPoolResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ListenPoolResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Poltererfassung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="dsService" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="PoltererfassungResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="PoltererfassungResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckVersion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CheckVersionResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateFertigmeldung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="xmlFile" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CreateFertigmeldungResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CreateFertigmeldungResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemovePolterFromFertigmeldung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="arrPIDs" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RemovePolterFromFertigmeldungResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RemovePolterFromFertigmeldungResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePolters">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="arrPIDs" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeletePoltersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="DeletePoltersResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SWNet">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="ds" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SWNetResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SWNetResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WfpNetTransport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="dsImport" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WfpNetTransportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="WfpNetTransportResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WASP_Poltererfassung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ds_String" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="WASP_PoltererfassungResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="WASP_PoltererfassungResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPolterFromNetlogistik">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GUID" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPolterFromNetlogistikResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetPolterFromNetlogistikResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFertigmeldung">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Tage" type="xs:int" />
+            <xs:element minOccurs="0" name="Filter_LiName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="DsUpload" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFertigmeldungResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetFertigmeldungResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStammAdr">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStammAdrResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetStammAdrResult" nillable="true">
+              <xs:complexType>
+                <xs:annotation>
+                  <xs:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:sequence>
+                  <xs:element ref="xs:schema" />
+                  <xs:any />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStammdaten">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStammdatenResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetStammdatenResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetWebFirma">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetWebFirmaResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetWebFirmaResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UbergabePolter">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="DsUpload" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UbergabePolterResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UbergabePolterResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetWfpNetCommTransport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="WebFirma" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetWfpNetCommTransportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GetWfpNetCommTransportResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckProjectVersion">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="NewVersion" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CheckProjectVersionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CheckProjectVersionResult" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="NewVersion" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProjectUpgrade">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Application" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="UpgVersion" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ProjectUpgradeResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProjectUpgradeResult" nillable="true" type="xs:base64Binary" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="CompositeType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="DataSet" nillable="true">
+        <xs:complexType>
+          <xs:annotation>
+            <xs:appinfo>
+              <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:sequence>
+            <xs:element ref="xs:schema" />
+            <xs:any />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSQL" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectSQL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Disp_Trans_InputMessage">
+    <wsdl:part name="parameters" element="tns:Disp_Trans" />
+  </wsdl:message>
+  <wsdl:message name="IService_Disp_Trans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Disp_TransResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetNetLogistikDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetLogistikDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetNetLogistikDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNetLogistikDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_test10_InputMessage">
+    <wsdl:part name="parameters" element="tns:test10" />
+  </wsdl:message>
+  <wsdl:message name="IService_test10_OutputMessage">
+    <wsdl:part name="parameters" element="tns:test10Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_test11_InputMessage">
+    <wsdl:part name="parameters" element="tns:test11" />
+  </wsdl:message>
+  <wsdl:message name="IService_test11_OutputMessage">
+    <wsdl:part name="parameters" element="tns:test11Response" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDate" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAuftrag_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuftrag" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAuftrag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuftragResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_PutSW_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutSW" />
+  </wsdl:message>
+  <wsdl:message name="IService_PutSW_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutSWResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Tabellen_InputMessage">
+    <wsdl:part name="parameters" element="tns:Tabellen" />
+  </wsdl:message>
+  <wsdl:message name="IService_Tabellen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TabellenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Transport_InputMessage">
+    <wsdl:part name="parameters" element="tns:Transport" />
+  </wsdl:message>
+  <wsdl:message name="IService_Transport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TransportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ListenPool_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListenPool" />
+  </wsdl:message>
+  <wsdl:message name="IService_ListenPool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListenPoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Poltererfassung_InputMessage">
+    <wsdl:part name="parameters" element="tns:Poltererfassung" />
+  </wsdl:message>
+  <wsdl:message name="IService_Poltererfassung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PoltererfassungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVersion" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CreateFertigmeldung_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFertigmeldung" />
+  </wsdl:message>
+  <wsdl:message name="IService_CreateFertigmeldung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFertigmeldungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePolterFromFertigmeldung_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePolterFromFertigmeldung" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePolterFromFertigmeldung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePolterFromFertigmeldungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeletePolters_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePolters" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeletePolters_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePoltersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SWNet_InputMessage">
+    <wsdl:part name="parameters" element="tns:SWNet" />
+  </wsdl:message>
+  <wsdl:message name="IService_SWNet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SWNetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_WfpNetTransport_InputMessage">
+    <wsdl:part name="parameters" element="tns:WfpNetTransport" />
+  </wsdl:message>
+  <wsdl:message name="IService_WfpNetTransport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WfpNetTransportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_WASP_Poltererfassung_InputMessage">
+    <wsdl:part name="parameters" element="tns:WASP_Poltererfassung" />
+  </wsdl:message>
+  <wsdl:message name="IService_WASP_Poltererfassung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WASP_PoltererfassungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetPolterFromNetlogistik_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPolterFromNetlogistik" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetPolterFromNetlogistik_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPolterFromNetlogistikResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFertigmeldung_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFertigmeldung" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetFertigmeldung_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFertigmeldungResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetStammAdr_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStammAdr" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetStammAdr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStammAdrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetStammdaten_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStammdaten" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetStammdaten_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStammdatenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetWebFirma_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebFirma" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetWebFirma_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWebFirmaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UbergabePolter_InputMessage">
+    <wsdl:part name="parameters" element="tns:UbergabePolter" />
+  </wsdl:message>
+  <wsdl:message name="IService_UbergabePolter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UbergabePolterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetWfpNetCommTransport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWfpNetCommTransport" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetWfpNetCommTransport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWfpNetCommTransportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckProjectVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckProjectVersion" />
+  </wsdl:message>
+  <wsdl:message name="IService_CheckProjectVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckProjectVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_ProjectUpgrade_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProjectUpgrade" />
+  </wsdl:message>
+  <wsdl:message name="IService_ProjectUpgrade_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProjectUpgradeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetData" message="tns:IService_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetDataResponse" message="tns:IService_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetDataUsingDataContract" message="tns:IService_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetDataUsingDataContractResponse" message="tns:IService_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectSQL" message="tns:IService_SelectSQL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectSQLResponse" message="tns:IService_SelectSQL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Disp_Trans">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Disp_Trans" message="tns:IService_Disp_Trans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/Disp_TransResponse" message="tns:IService_Disp_Trans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNetLogistikDocuments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetNetLogistikDocuments" message="tns:IService_GetNetLogistikDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetNetLogistikDocumentsResponse" message="tns:IService_GetNetLogistikDocuments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CheckUser" message="tns:IService_CheckUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CheckUserResponse" message="tns:IService_CheckUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test10">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/test10" message="tns:IService_test10_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/test10Response" message="tns:IService_test10_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test11">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/test11" message="tns:IService_test11_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/test11Response" message="tns:IService_test11_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetDate" message="tns:IService_GetDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetDateResponse" message="tns:IService_GetDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuftrag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAuftrag" message="tns:IService_GetAuftrag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAuftragResponse" message="tns:IService_GetAuftrag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutSW">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/PutSW" message="tns:IService_PutSW_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PutSWResponse" message="tns:IService_PutSW_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Tabellen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Tabellen" message="tns:IService_Tabellen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/TabellenResponse" message="tns:IService_Tabellen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Transport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Transport" message="tns:IService_Transport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/TransportResponse" message="tns:IService_Transport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListenPool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ListenPool" message="tns:IService_ListenPool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ListenPoolResponse" message="tns:IService_ListenPool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Poltererfassung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Poltererfassung" message="tns:IService_Poltererfassung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/PoltererfassungResponse" message="tns:IService_Poltererfassung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CheckVersion" message="tns:IService_CheckVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CheckVersionResponse" message="tns:IService_CheckVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFertigmeldung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CreateFertigmeldung" message="tns:IService_CreateFertigmeldung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CreateFertigmeldungResponse" message="tns:IService_CreateFertigmeldung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePolterFromFertigmeldung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RemovePolterFromFertigmeldung" message="tns:IService_RemovePolterFromFertigmeldung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RemovePolterFromFertigmeldungResponse" message="tns:IService_RemovePolterFromFertigmeldung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolters">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeletePolters" message="tns:IService_DeletePolters_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeletePoltersResponse" message="tns:IService_DeletePolters_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SWNet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SWNet" message="tns:IService_SWNet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SWNetResponse" message="tns:IService_SWNet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WfpNetTransport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/WfpNetTransport" message="tns:IService_WfpNetTransport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/WfpNetTransportResponse" message="tns:IService_WfpNetTransport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WASP_Poltererfassung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/WASP_Poltererfassung" message="tns:IService_WASP_Poltererfassung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/WASP_PoltererfassungResponse" message="tns:IService_WASP_Poltererfassung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolterFromNetlogistik">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetPolterFromNetlogistik" message="tns:IService_GetPolterFromNetlogistik_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetPolterFromNetlogistikResponse" message="tns:IService_GetPolterFromNetlogistik_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFertigmeldung">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetFertigmeldung" message="tns:IService_GetFertigmeldung_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetFertigmeldungResponse" message="tns:IService_GetFertigmeldung_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStammAdr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetStammAdr" message="tns:IService_GetStammAdr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetStammAdrResponse" message="tns:IService_GetStammAdr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStammdaten">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetStammdaten" message="tns:IService_GetStammdaten_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetStammdatenResponse" message="tns:IService_GetStammdaten_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebFirma">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetWebFirma" message="tns:IService_GetWebFirma_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetWebFirmaResponse" message="tns:IService_GetWebFirma_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UbergabePolter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UbergabePolter" message="tns:IService_UbergabePolter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UbergabePolterResponse" message="tns:IService_UbergabePolter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWfpNetCommTransport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetWfpNetCommTransport" message="tns:IService_GetWfpNetCommTransport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetWfpNetCommTransportResponse" message="tns:IService_GetWfpNetCommTransport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckProjectVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CheckProjectVersion" message="tns:IService_CheckProjectVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CheckProjectVersionResponse" message="tns:IService_CheckProjectVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProjectUpgrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/ProjectUpgrade" message="tns:IService_ProjectUpgrade_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/ProjectUpgradeResponse" message="tns:IService_ProjectUpgrade_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectSQL">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Disp_Trans">
+      <soap:operation soapAction="http://tempuri.org/IService/Disp_Trans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNetLogistikDocuments">
+      <soap:operation soapAction="http://tempuri.org/IService/GetNetLogistikDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckUser">
+      <soap:operation soapAction="http://tempuri.org/IService/CheckUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test10">
+      <soap:operation soapAction="http://tempuri.org/IService/test10" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test11">
+      <soap:operation soapAction="http://tempuri.org/IService/test11" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <soap:operation soapAction="http://tempuri.org/IService/GetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuftrag">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAuftrag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutSW">
+      <soap:operation soapAction="http://tempuri.org/IService/PutSW" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tabellen">
+      <soap:operation soapAction="http://tempuri.org/IService/Tabellen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Transport">
+      <soap:operation soapAction="http://tempuri.org/IService/Transport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListenPool">
+      <soap:operation soapAction="http://tempuri.org/IService/ListenPool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Poltererfassung">
+      <soap:operation soapAction="http://tempuri.org/IService/Poltererfassung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckVersion">
+      <soap:operation soapAction="http://tempuri.org/IService/CheckVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFertigmeldung">
+      <soap:operation soapAction="http://tempuri.org/IService/CreateFertigmeldung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePolterFromFertigmeldung">
+      <soap:operation soapAction="http://tempuri.org/IService/RemovePolterFromFertigmeldung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePolters">
+      <soap:operation soapAction="http://tempuri.org/IService/DeletePolters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SWNet">
+      <soap:operation soapAction="http://tempuri.org/IService/SWNet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WfpNetTransport">
+      <soap:operation soapAction="http://tempuri.org/IService/WfpNetTransport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WASP_Poltererfassung">
+      <soap:operation soapAction="http://tempuri.org/IService/WASP_Poltererfassung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolterFromNetlogistik">
+      <soap:operation soapAction="http://tempuri.org/IService/GetPolterFromNetlogistik" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFertigmeldung">
+      <soap:operation soapAction="http://tempuri.org/IService/GetFertigmeldung" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStammAdr">
+      <soap:operation soapAction="http://tempuri.org/IService/GetStammAdr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStammdaten">
+      <soap:operation soapAction="http://tempuri.org/IService/GetStammdaten" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWebFirma">
+      <soap:operation soapAction="http://tempuri.org/IService/GetWebFirma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UbergabePolter">
+      <soap:operation soapAction="http://tempuri.org/IService/UbergabePolter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWfpNetCommTransport">
+      <soap:operation soapAction="http://tempuri.org/IService/GetWfpNetCommTransport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckProjectVersion">
+      <soap:operation soapAction="http://tempuri.org/IService/CheckProjectVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProjectUpgrade">
+      <soap:operation soapAction="http://tempuri.org/IService/ProjectUpgrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://vm627ef72/WfpNetServiceWCFDemo/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

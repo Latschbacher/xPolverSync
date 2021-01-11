@@ -1,0 +1,130 @@
+1=7042=Fichte; Kommentare nach zweitem = möglich
+2=7042=Fichte
+3=7042=Fichte
+4=7042=Fichte
+5=7042=Fichte
+6=7042=Fichte
+7=7042=Fichte
+11=7056=Tanne
+12=7056=Tanne
+13=7056=Tanne
+14=7056=Tanne
+15=7056=Tanne
+16=7056=Tanne
+17=7056=Tanne
+21=17427=Fichte/Tanne
+22=17427=Fichte/Tanne
+23=17427=Fichte/Tanne
+24=17427=Fichte/Tanne
+25=17427=Fichte/Tanne
+26=17427=Fichte/Tanne
+27=17427=Fichte/Tanne
+31=7043=Föhre
+32=7043=Föhre
+33=7043=Föhre
+34=7043=Föhre
+35=7043=Föhre
+36=7043=Föhre
+37=7043=Föhre
+41=7047=Lärche
+42=7047=Lärche
+43=7047=Lärche
+44=7047=Lärche
+45=7047=Lärche
+46=7047=Lärche
+47=7047=Lärche
+51=7030=Andere Nadelhölzer
+52=7030=Andere Nadelhölzer
+53=7030=Andere Nadelhölzer
+54=7030=Andere Nadelhölzer
+55=7030=Andere Nadelhölzer
+56=7030=Andere Nadelhölzer
+57=7030=Andere Nadelhölzer
+61=7042=Fichte
+62=7042=Fichte
+63=7042=Fichte
+66=7056=Tanne
+67=7056=Tanne
+68=7056=Tanne
+71=17427=Fichte/Tanne
+72=17427=Fichte/Tanne
+73=17427=Fichte/Tanne
+76=7043=Föhre
+77=7043=Föhre
+78=7043=Föhre
+81=7047=Lärche
+82=7047=Lärche
+83=7047=Lärche
+86=7030=Andere Nadelhölzer
+87=7030=Andere Nadelhölzer
+88=7030=Andere Nadelhölzer
+101=7034=Buche
+102=7034=Buche
+103=7034=Buche
+104=7034=Buche
+105=7034=Buche
+110=7034=Buche
+111=7037=Eiche
+112=7037=Eiche
+113=7037=Eiche
+114=7037=Eiche
+115=7037=Eiche
+120=7037=Eiche
+121=7040=Esche
+122=7040=Esche
+123=7040=Esche
+124=7040=Esche
+125=7040=Esche
+131=7046=Kirsche
+132=7046=Kirsche
+133=7046=Kirsche
+134=7046=Kirsche
+135=7046=Kirsche
+141=17427=Fichte/Tanne
+142=17427=Fichte/Tanne
+143=17427=Fichte/Tanne
+144=17427=Fichte/Tanne
+145=17427=Fichte/Tanne
+146=17427=Fichte/Tanne
+147=7030=Andere Nadelhölzer
+148=7030=Andere Nadelhölzer
+149=7034=Buche
+150=7034=Buche
+151=7029=Andere Laubhölzer
+152=7029=Andere Laubhölzer
+153=7030=Andere Nadelhölzer
+154=7030=Andere Nadelhölzer
+155=7034=Buche
+156=7034=Buche
+157=7029=Andere Laubhölzer
+158=7029=Andere Laubhölzer
+159=7030=Andere Nadelhölzer
+160=7030=Andere Nadelhölzer
+161=7029=Andere Laubhölzer
+162=7029=Andere Laubhölzer
+171=7034=Buche
+172=7034=Buche
+173=7034=Buche
+174=7034=Buche
+175=7029=Andere Laubhölzer
+176=7029=Andere Laubhölzer
+177=7029=Andere Laubhölzer
+178=7029=Andere Laubhölzer
+179=17427=Fichte/Tanne
+180=17427=Fichte/Tanne
+181=17427=Fichte/Tanne
+182=17427=Fichte/Tanne
+183=7030=Andere Nadelhölzer
+184=7030=Andere Nadelhölzer
+185=7030=Andere Nadelhölzer
+186=7030=Andere Nadelhölzer
+191=7034=Buche
+192=0=Nicht vorhanden; Lbh Stämme in Polxess
+193=0=Nicht vorhanden; Lbh Aeste Kronen in Polxess
+194=0=Nicht vorhanden; Waldholz Laub > 25% in Polxess
+195=0=Nicht vorhanden; Waldholz Laub > 50% in Polxess
+196=0=Nicht vorhanden; Waldholz Laub > 75% in Polxess
+197=0=Nicht vorhanden; Waldholz Nadel > 75% in Polxess
+198=7029=Andere Laubhölzer
+199=17345=Nadelholz
+200=0=Nicht vorhanden; Landschaftspflegeholz in Polxess

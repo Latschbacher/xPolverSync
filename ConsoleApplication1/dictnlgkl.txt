@@ -1,0 +1,50 @@
+110=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Schwellen in Polxess
+120=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Schwellen in Polxess
+141=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+142=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+143=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+144=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+145=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+146=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+147=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+148=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+149=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+150=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+151=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+152=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+153=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+154=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+155=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+156=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+157=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+158=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+159=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+160=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+161=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+162=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+171=1=GKL 1 wurd verwendet; Nicht vorhanden; <32 oder <40cm in Polxess
+172=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Rugel in Polxess
+173=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Spälten in Polxess				  
+174=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+175=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+176=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Rugel in Polxess
+177=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Spälten in Polxess				  
+178=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+179=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+180=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Rugel in Polxess
+181=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Spälten in Polxess				  
+182=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+183=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+184=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Rugel in Polxess
+185=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; Spälten in Polxess				  
+186=2=GKL 2 wurd verwendet; Nicht vorhanden als GKL; trocken in Polxess
+191=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+192=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+193=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+194=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+195=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+196=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+197=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+198=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+199=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
+200=2=GKL 2 wurd verwendet; Nicht vorhanden; - in Polxess
